@@ -16,7 +16,7 @@ def error(update, context):
     logger.warning('%s caused error (%s)', update, context.error)
 
 def JediCheck(update, context):
-    chat_id = update.message.chat.id
+    chatId = update.message.chat.id
     dict1 = {"A": "You are Anakin Skywalker! Rudest to enemies, nicest to friends. Best pilot in your village.", 
     "Y": "Yoda, you are! Litte grumpy Shrek. Sometimes can do something cool.", 
     "M": "You are Mace Windu! No shit for nothing, badass motherducker. Maybe villian.", 
@@ -32,7 +32,7 @@ def JediCheck(update, context):
     letter = item[0]
     discr = item[1]
         
-    bot.sendPhoto(chat_id = chat_id, photo=open('%s.jpg' % letter, 'rb'), caption=discr)
+    bot.sendPhoto(chat_id = chatId, photo=open('%s.jpg' % letter, 'rb'), caption=discr)
 
 def main():
    
