@@ -9,8 +9,8 @@ logger = logging.getLogger(__name__)
 bot = telegram.Bot(token='2133753651:AAHtA4_kqPvdx_6vdImHTpW4s-s24x4RSik')
 
 def start(update, context):
-    chat_id = update.message.chat.id
-    bot.sendMessage(chat_id, 'Hello! You can know which Jedi you are by sending /who to me! :-)')
+    chatId = update.message.chat.id
+    bot.sendMessage(chatId, 'Hello! You can know which Jedi you are by sending /who to me! :-)')
 
 def error(update, context):
     logger.warning('%s caused error (%s)', update, context.error)
