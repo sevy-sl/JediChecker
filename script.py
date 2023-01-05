@@ -6,7 +6,7 @@ from telegram.ext import Updater, CommandHandler
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-bot = telegram.Bot(token='2133753651:AAHtA4_kqPvdx_6vdImHTpW4s-s24x4RSik')
+bot = telegram.Bot(token='')
 
 def start(update, context):
     chatId = update.message.chat.id
@@ -36,7 +36,7 @@ def JediCheck(update, context):
 
 def main():
    
-    updater = Updater('2133753651:AAHtA4_kqPvdx_6vdImHTpW4s-s24x4RSik', use_context=True)
+    updater = Updater('', use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('who', JediCheck))
